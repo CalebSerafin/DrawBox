@@ -13,7 +13,7 @@
 //----------------Public Functions----------------
 double stringtoast(std::string input);
 std::string toasting(double in);
-long long int safeInputInt();
+int safeInputInt();
 double safeInputDouble();
 void DrawBoxHandler();
 void XYGraphHandler();

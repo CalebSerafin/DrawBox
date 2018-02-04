@@ -42,7 +42,7 @@ std::string toasting(double in)
 };
 //--------------------------------
 
-long long int safeInputInt()
+int safeInputInt()
 {
 	std::string input="";
 	double working=0;
@@ -55,9 +55,11 @@ long long int safeInputInt()
 double safeInputDouble()
 {
 	std::string input="";
+	double working=0;
 	std::cin>>input;
 
-	return stringtoast(input);
+	working=stringtoast(input);
+	return working;
 };
 
 void printModOptions()

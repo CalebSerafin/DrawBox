@@ -8,8 +8,8 @@
 #include "SuperHandler.hpp"
 #include <iostream>
 #include <string>
+
 #include "Handlers.hpp"
-#include "UnexpectedHandle.hpp"
 #include "ExecuteFrom.hpp"
 
 void SuperHandler()
@@ -30,13 +30,13 @@ void SuperHandler()
 				whatIs = "Console";
 			}
 
-			//*Debug*/std::cout<<whatIs<<std::endl;
+			/*Debug*/std::cout<<whatIs<<std::endl;
 
 
 			retry=0;
 			std::cout<<"Would you like to use: \n1	Drawbox \n2	XYGraph "<<std::endl;
 			int choice;
-			std::cin>>choice;
+			choice = safeInputInt();
 			if(choice==1)
 			{
 				DrawBoxHandler();
@@ -47,8 +47,7 @@ void SuperHandler()
 			}
 			else
 			{
-				std::string protocall = "error";
-				retry = nowWhat(choice,protocall);
+				retry=1;
 			};
 		};
 	};
